@@ -1,0 +1,14 @@
+.app-main{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+// @media only screen and (max-width: 600px){
+//     :host ::ng-deep app-header{
+//         display: none;
+//     }
+//     :host ::ng-deep app-sidebar{
+//         display: none !important;
+//     }
+// }

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="main-section">
+            <div class="side-left">
+                <app-carousel [images]="images" [autoslide]="autoSlideFlag"></app-carousel>
+            </div>
+            <div class="side-right">
+                <h2>Book an Appointment</h2>
+                <form [formGroup] = "myForm" (ngSubmit)="onSubmit(myForm)">
+                    <div class="formname">
+                    <div>
+                        <label>
+                        First Name:
+                        <input type="text" formControlName="firstname" placeholder="Your first name*">
+                        <div class="error-msg" *ngIf="myForm?.get('firstname')?.invalid && (myForm?.get('firstname')?.dirty || myForm?.get('firstname')?.touched)">
+                            <small *ngIf="myForm?.get('firstname')?.errors">
+                                <i>FirstName is Mandatory</i>
+                            </small>
+                        </div>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                         Last Name:
+                        <input type="text" formControlName="lastname" placeholder="Your last name*">
+                        <div class="error-msg" *ngIf="myForm?.get('lastname')?.invalid && (myForm?.get('lastname')?.dirty || myForm?.get('lastname')?.touched)">
+                            <small *ngIf="myForm?.get('lastname')?.errors">
+                                <i>LastName is Mandatory</i>
+                            </small>
+                        </div>
+                        </label>
+                    </div>
+                    </div>
+                    <div class="email-address">
+                        <label>
+                            Your Email Address:
+                            <input type="email" formControlName="emailaddress" placeholder="Your email address*">
+                            <div class="error-msg" *ngIf="myForm?.get('emailaddress')?.invalid && (myForm?.get('emailaddress')?.dirty || myForm?.get('emailaddress')?.touched)">
+                                <small *ngIf="myForm?.get('emailaddress')?.errors">
+                                    <i>Email is Mandatory</i>
+                                </small>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="contact-no">
+                        <label>
+                            Contact No:
+                            <input type="text" formControlName="contactno" placeholder="Your contact no*">
+                            <div class="error-msg" *ngIf="myForm?.get('contactno')?.invalid && (myForm?.get('contactno')?.dirty || myForm?.get('contactno')?.touched)">
+                                <small *ngIf="myForm?.get('contactno')?.errors">
+                                    <i>Contact Number is Mandatory</i>
+                                </small>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="date-time">
+                    <div>
+                        <label>
+                            Date
+                            <input type="date" formControlName="appointmentdate" placeholder="Appointment date*">
+                            <div class="error-msg" *ngIf="myForm?.get('appointmentdate')?.invalid && (myForm?.get('appointmentdate')?.dirty || myForm?.get('appointmentdate')?.touched)">
+                                <small *ngIf="myForm?.get('appointmentdate')?.errors">
+                                    <i>Date is Mandatory</i>
+                                </small>
+                            </div>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            Time:
+                            <input type="time" formControlName="appointmenttime" placeholder="Appointment time*">
+                            <div class="error-msg" *ngIf="myForm?.get('appointmenttime')?.invalid && (myForm?.get('appointmenttime')?.dirty || myForm?.get('appointmenttime')?.touched)">
+                                <small *ngIf="myForm?.get('appointmenttime')?.errors">
+                                    <i>Time is Mandatory</i>
+                                </small>
+                            </div>
+                        </label>
+                    </div>
+                    </div>
+                    <div class="error" *ngIf="formStatus">
+                        <small><i>All the fields are required.</i></small>
+                    </div>
+                    <div class="button-container">
+                    <button type="submit" class="btn">
+                        <span>Book now</span>
+                        <span >
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1.75em" viewBox="0 0 512 512"><path d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9V344c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z" fill="#fff"/></svg>
+                        </span>
+                    </button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

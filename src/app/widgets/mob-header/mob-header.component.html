@@ -1,0 +1,12 @@
+<div class="top-nav">
+    <div class="nav-wrapper">
+        <div class="nav-item" (click)="toggleUp()">
+            <div class="lines" *ngFor="let line of lines; index as i"></div>
+        </div>
+    </div>
+    <div class="list-items" *ngIf="isToggle">
+        <ul *ngFor="let element of navItems; index as i">
+            <li>{{element.field}}</li>
+        </ul>
+    </div>
+</div>

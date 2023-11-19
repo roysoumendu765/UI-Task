@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.gstatic.com');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import "~@fortawesome/fontawesome-free/scss/brands.scss"; 
+
+body{
+    height: max-content;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color:  #ecfcf3 !important;
+    font-family: 'Roboto', sans-serif;
+}

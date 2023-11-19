@@ -1,0 +1,83 @@
+.main{
+    background-color: #014d4b;
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+    width: 5vw;
+}
+.upper{
+    display: flex !important;
+    height: 50% !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+.upper .home{
+    margin-top: 30px;
+    height: 40%;
+    width: 100%;
+    background-image: url('../../../assets/icons/house-solid.svg');
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.upper .home svg{
+    transform: scale(1.75) !important;
+}
+.upper .home svg:hover{
+    opacity: 0.5;
+}
+.upper .home svg:active{
+    opacity: 0.5;
+}
+
+.lower{
+    height: 50% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+.lower .item{
+    margin-bottom: 10px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lower .item:last-of-type{
+    margin-bottom: 30px !important;
+}
+
+.lower .item svg{
+    transform: scale(1.6) !important;
+}
+.lower .item svg:hover{
+    opacity: 0.5;
+}
+.lower .item svg:active{
+    opacity: 0.5;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){
+    .main{
+        width: 10vw;
+    }
+    .upper .home svg{
+        transform: scale(3) !important;
+        margin-top: 30px;
+    }
+    .lower{
+        .item{
+            margin-bottom: 30px !important;
+        }
+        .item svg{
+            transform: scale(3) !important;
+            
+        }
+        .item:last-of-type{
+            margin-bottom: 50px !important;
+        }
+    }
+}

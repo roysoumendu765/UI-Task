@@ -1,0 +1,256 @@
+.main-container{
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    height: 100%;
+    margin-top: 2rem;
+    background-color: #ecfcf3 !important;
+    display: flex !important;
+    align-items: start !important;
+    justify-content: center !important;
+}
+.main-section{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    box-shadow: 5px 0px 15px 0px #94bca5;
+    height: 70%;
+    background-color: white;
+}
+.side-left{
+    width: 60%;
+    height: 375px;
+}
+.side-right{
+    height: 100%;
+    width: 40%;
+}
+form{
+    padding: 0 25px;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: inherit;
+}
+
+ .side-right h2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1ea071;
+}
+
+form input {
+    outline: none;
+    font-size: 13px;
+    margin: 5px auto;
+    border: none;
+    padding: 5px 0 5px 0 !important;
+    border-radius: 30px;
+}
+
+label:not(div){
+    margin-bottom: 15px !important;
+    display: flex;
+    color: #919191;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 11px;
+    margin: 0 10px;
+}
+
+form input::placeholder{
+    font-size: 10px;
+    font-style: italic;
+    padding: 10px !important;
+    border-radius: 10px;
+    height: inherit;
+    margin: 0 !important;
+    background-color: #efefef;
+}
+
+form input:focus{
+    text-indent: 5px;
+    background-color: #efefef;
+}
+
+form input:target{
+    text-indent: 5px;
+    background-color: #efefef;
+}
+
+form input.ng-dirty.ng-valid.ng-touched{
+    background-color: #efefef !important;
+}
+
+.formname{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.date-time{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.date-time {
+    input{
+        background-color: #efefef;
+        @media only screen and (max-width: 767x) {
+            width: 6rem !important;
+        }
+        @media only screen and (min-width: 1025px){
+            width: 8rem !important;
+        }
+    }
+    input:focus{
+        background-color: #efefef;
+    }
+    input:target{
+        background-color: #efefef;
+    }
+    input.ng-dirty.ng-valid.ng-touched{
+        background-color: #efefef !important;
+    }
+}
+
+.email-address, .contact-no {
+    width: 100%;
+}
+
+.contact-no input{
+    width: 100%;
+}
+
+.email-address, input{
+    width: 100%;
+}
+
+.btn{
+display: flex;
+border-radius: 20px;
+flex-direction: row;
+justify-content: space-evenly;
+align-items: center;
+border: none;
+height: 2.2rem;
+width: 8rem;
+color: #fff;
+font-weight: 600;
+background: #1CA672;
+}
+
+.btn:hover{
+    opacity: 0.5;
+}
+
+.button-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email-address{
+    text-indent: 5px;
+    input{
+        background-color: #efefef;
+    }
+    input.ng-dirty.ng-valid.ng-touched{
+        background-color: #efefef !important;
+    }
+    input:focus{
+        background-color: #efefef;
+    }
+    input:target{
+        background-color: #efefef;
+    }
+}
+
+.error-msg{
+    color: red;
+}
+.error{
+    color: red;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+// For Tab
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){
+    .main-section{
+        flex-direction: column-reverse;
+    }
+    .btn{
+        margin-bottom: 10px;
+    }
+    h2{
+        font-size: 35px;
+    }
+    .side-left{
+        margin-bottom: 10px;
+    }
+    .side-left, .side-right{
+        width: 100%;
+    }
+    .formname{
+        width: 100%;
+        div{
+            width: 100%;
+        }
+    }
+    .date-time{
+        display: flex;
+        // justify-content: center;
+        width: 100% !important;
+        div{
+            width: 100% !important;
+        }
+    }
+}
+
+// For Mobile Screens
+@media only screen and (max-width: 600px) {
+    .main-section{
+        width: 96%;
+        flex-direction: column-reverse;
+    }
+    .side-right{
+        margin: 10px 0px 5rem 0px;
+    }
+    .side-right h2{
+        font-size: 30px;
+        margin-bottom: 2rem;
+    }
+    form label{
+        font-size: 20px;
+    }
+    .side-left, .side-right{
+        width: 100%;
+    }
+    .formname, .date-time{
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        div{
+            width: 100%;
+        }
+    }
+    .button-container{
+        width: 100%;
+        button{
+            width: 50%;
+        }
+        .btn span:first-child{
+            font-size: 20px;
+        }
+    }
+}
